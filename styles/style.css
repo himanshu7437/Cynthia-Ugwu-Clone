@@ -2,10 +2,207 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'General Sans';
+    color: white;
 }
 
 html, body {
     height: 100%;
     width: 100%;
-    background-color: black;
+}
+
+.main {
+    width: 100%;
+}
+
+.home-page {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.home-page .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    /* background-color: red; */
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav h4 {
+    text-transform: uppercase;
+}
+
+.home-txt {
+    /* background-color: red; */
+    padding: 25px 40px;
+    line-height: 1;
+
+}
+
+.home-txt h1 {
+    /* background-color: red; */
+    font-size: 9.7vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: .6;
+}
+
+.secondtxt {
+    width: fit-content;
+    text-align: right;
+}
+
+.secondtxt h5{
+    text-transform: uppercase;
+    font-size: 1vw;
+    padding-top: 10px;
+}
+
+.secondtxt .secondh1{
+    padding-left: 150px;
+}
+
+.seconddiv {
+    /* background-color: blue; */
+    text-align: right;
+    padding: 15px 40px;
+    padding-top: 120px;
+}
+
+.seconddiv h4 {
+    text-transform: uppercase;
+}
+
+.home-bottom {
+    /* background-color: red; */
+    width: 100%;
+    padding: 0px 40px;
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-bottom a {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.home-bottom a h4 {
+    text-transform: uppercase;
+}
+
+.bottom-icons i {
+    border-radius: 50%;
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+    background-color: #AAAAAA;
+}
+
+.projects {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    padding: 0px 40px;
+    padding-top: 170px;
+}
+
+.projects .elem {
+    width: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #313131;
+}
+
+.projects .elem h1{
+    padding: 40px 0px;
+    font-size: 7.3vw;
+    text-transform: uppercase;
+    opacity: .6;
+}
+.projects .lastelem {
+    border-bottom: 1px solid #313131;
+
+}
+
+.working-logos {
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    padding: 45px 40px;
+}
+
+.working-logos button {
+    background-color: black ;
+    padding: 9px 20px;
+    border-radius: 30px;
+    border: 1px solid white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.working-logos marquee {
+    border-top: 1px solid #313131;
+    border-bottom: 1px solid #313131;
+    margin-top: 200px;
+}
+
+.working-logos marquee h1 {
+    display: inline;
+    font-size: 7vw;
+    text-transform: uppercase;
+    opacity: .6;
+
+}
+
+.end-page {
+    background-color: rgb(0, 0, 0);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* push content to right */
+    padding: 50px; /* spacing from edges */
+    box-sizing: border-box;
+}
+
+.end-page .about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+    max-width: 800px; 
+}
+
+.end-page .about img {
+    height: 220px;
+    width: 220px;
+    flex-shrink: 0; 
+}
+
+.about-txt {
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-txt h5 {
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+.about-txt p {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 500px;
 }
