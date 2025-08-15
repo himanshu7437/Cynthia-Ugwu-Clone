@@ -37,5 +37,43 @@ function firstPage() {
     })
 }
 
+function btn1() {
+    var btn = document.querySelector('.btn1')
+    btn.addEventListener('mouseenter', function() {
+        gsap.to('.btn1', {
+            backgroundColor: 'white',
+            color: 'black',
+            ease: Power2,
+        })
+    })
+    btn.addEventListener('mouseleave', function() {
+        gsap.to('.btn1', {
+            backgroundColor: 'black',
+            color: 'white',
+            ease: Power2,
+        })
+    })
+}
+
+function btn2() {
+    var btn2 = document.querySelector('.btn2')
+    btn2.addEventListener('mouseenter', function() {
+        gsap.to('.btn2', {
+            backgroundColor: 'white',
+            color: 'black',
+            ease: Power2,
+        })
+    })
+    btn2.addEventListener('mouseleave', function() {
+        gsap.to('.btn2', {
+            backgroundColor: 'black',
+            color: 'white',
+            ease: Power2,
+        })
+    })
+}
+
 crsrfollower();
-firstPage()
+firstPage();
+btn1();
+btn2();
