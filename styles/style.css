@@ -23,6 +23,28 @@ html, body {
     mix-blend-mode: difference;
 }
 
+/* // for view text
+
+.crsr {
+    scale: 1;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    transition: background-color 0.3s ease;
+    mix-blend-mode: difference;
+} */
+
 .main {
     width: 100%;
     background-color: black;
@@ -166,11 +188,24 @@ html, body {
 }
 
 .projects .elem {
+    position: relative;
     width: 93%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid #313131;
+}
+
+.projects .elem img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none; /* prevents blocking hover */
+    z-index: 500;
 }
 
 .projects .elem h1{

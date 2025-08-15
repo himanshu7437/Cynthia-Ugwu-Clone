@@ -73,7 +73,62 @@ function btn2() {
     })
 }
 
+function projectImg() {
+    var elements = document.querySelectorAll('.elem');
+
+    elements.forEach(function(elem) {
+        let img = elem.querySelector('img');
+        let title = elem.querySelector('h1');
+
+        elem.addEventListener('mouseenter', function(e) {
+            const rect = elem.getBoundingClientRect();
+            let x = e.clientX - rect.left - img.offsetWidth / 2; 
+            let y = e.clientY - rect.top - img.offsetHeight / 2;
+
+            // Instantly position image to cursor
+            gsap.set(img, { x: x, y: y });
+
+            // Fade in image
+            gsap.to(img, { opacity: 1, duration: 0.4 });
+
+            // Animate title
+            gsap.to(title, { 
+                x: 30, 
+                color: "#888", 
+                duration: 0.4, 
+                ease: "power2.out" 
+            });
+        });
+
+        elem.addEventListener('mousemove', function(e) {
+            const rect = elem.getBoundingClientRect();
+            let x = e.clientX - rect.left - img.offsetWidth / 2; 
+            let y = e.clientY - rect.top - img.offsetHeight / 2;
+
+            gsap.to(img, {
+                x: x,
+                y: y,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+
+        elem.addEventListener('mouseleave', function() {
+            gsap.to(img, { opacity: 0, duration: 0.4 });
+            gsap.to(title, { 
+                x: 0, 
+                color: "#fff", 
+                duration: 0.4, 
+                ease: "power2.out" 
+            });
+        });
+    });
+}
+
+
+
 crsrfollower();
 firstPage();
 btn1();
 btn2();
+projectImg();
